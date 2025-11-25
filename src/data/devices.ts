@@ -16,23 +16,23 @@ export type DeviceCategory = {
 };
 
 export const devicesData: DeviceCategory = {
-	OnePlus: [
+	Xiaomi: [
 		{
-			name: "OnePlus 13T",
-			image: "/images/device/oneplus13t.png",
-			specs: "Gray / 16G + 1TB",
-			description: "Flagship performance, Hasselblad imaging, 80W SuperVOOC.",
-			link: "https://www.oneplus.com/cn/13t",
+			name: "Xiaomi 15",
+			image: "/images/device/xiaomi15.png",
+			specs: "Gray / 12G + 256GB",
+			description: "小米 徕卡 联合研发",
+			link: "https://www.mi.com/prod/xiaomi-15",
 		},
 	],
-	Router: [
+	ROG: [
 		{
-			name: "GL-MT3000",
-			image: "/images/device/mt3000.png",
-			specs: "1000Mbps / 2.5G",
+			name: "ROG FLOW Z13 2025",
+			image: "/images/device/FLOW2025.png",
+			specs: "AMD RYZEN AI MAX+ 395",
 			description:
-				"Portable WiFi 6 router suitable for business trips and home use.",
-			link: "https://www.gl-inet.cn/products/gl-mt3000/",
+				"AMD RYZEN AI MAX+ 395",
+			link: "https://rog.asus.com.cn/laptops/rog-flow/rog-flow-z13-2025/",
 		},
 	],
 };
