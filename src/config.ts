@@ -22,7 +22,7 @@ const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UT
 export const siteConfig: SiteConfig = {
 	title: "高数好难啊",
 	subtitle: "Yunfan Tech",
-	siteURL: "https://myblog-pxjbgclo.edgeone.run/", // 请替换为你的站点URL，以斜杠结尾
+	siteURL: "https://sherry.qzz.io/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-10-01", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = {
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 345, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		hue: 185, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
 		fixed: false, // 对访问者隐藏主题色选择器
 	},
 
@@ -51,15 +51,15 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Yunfan Tech",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
-		icon: "assets/home/home.png",
+		icon: "assets/home/logo.png",
 	},
 
 	bangumi: {
-		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "1184005", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
 
 	anime: {
-		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
+		mode: "bangumi", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
 	},
 
 	// 文章列表布局配置
@@ -74,7 +74,7 @@ export const siteConfig: SiteConfig = {
 	// 标签样式配置
 	tagStyle: {
 		// 是否使用新样式（悬停高亮样式）还是旧样式（外框常亮样式）
-		useNewStyle: false,
+		useNewStyle: true,
 	},
 
 	// 壁纸模式配置
@@ -93,26 +93,38 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/1.webp",
-				"/assets/desktop-banner/2.webp",
-				"/assets/desktop-banner/3.webp",
-				"/assets/desktop-banner/4.webp",
-				"/assets/desktop-banner/5.webp",
-				"/assets/desktop-banner/6.webp",
+				"https://firefly.cuteleaf.cn/assets/images/d1.webp",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdb472f7.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabe26a1c3.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc452c0.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb33302fc.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb37c87ca.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb3ac429f.jpg",
+				"https://img.cdn1.vip/i/692ae5b42d74d_1764418996.webp",
+				"https://img.cdn1.vip/i/692ae6347c4ef_1764419124.webp",
+				"https://img.cdn1.vip/i/692ae6be2c979_1764419262.webp",
+				"https://cloudflareimg.cdn.sn/i/692ae6f298a96_1764419314.webp",
+				
 			], // 桌面横幅图片
 			mobile: [
-				"https://img.likefirefly.com/firefly-13-4.jpg",
-				"https://img.likefirefly.com/firefly-24-6.png",
-				"https://img.likefirefly.com/firefly-24-13.jpg",
-				"https://img.likefirefly.com/firefly-36-3.png",
-				"https://img.likefirefly.com/firefly-36-6.jpg",
-				"https://img.likefirefly.com/firefly-36-9.png",
-				"https://img.likefirefly.com/firefly-36-11.png",
-				"https://img.likefirefly.com/firefly-36-12.png",
-				"https://img.likefirefly.com/firefly-4-2.png",
-				"https://img.likefirefly.com/firefly-4-10.jpg",
-				"https://img.likefirefly.com/firefly-4-11.png",
-				"https://img.likefirefly.com/firefly-42-10.png",
+				"https://a2cy.com/d/file/phone/list/cos/2025-10-12/e2faf75b7f3ceaab06763b330a25a30c.jpg",
+				"https://a2cy.com/d/file/phone/coser/show/2020-01-16/acea91ca575834691c268033daa4d06c.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc5f0af.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc71a96.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc452c0.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabce4fdd9.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcd3c1fa.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabd887239.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabd97608c.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdbe89db.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdbc0bf8.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabe2625af.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692ab9433f5e6.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692ae4906d0ea.jpg",
+				"https://img.cdn1.vip/i/692ae4ff2436f_1764418815.webp",
+				"https://img.cdn1.vip/i/692ae5cb6cca3_1764419019.webp",
+				"https://img.cdn1.vip/i/692ae63b55ad1_1764419131.webp",
+				"https://img.cdn1.vip/i/692ae6c50720d_1764419269.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -121,7 +133,7 @@ export const siteConfig: SiteConfig = {
 		carousel: {
 			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 
-			interval: 5, // 轮播间隔时间（秒）
+			interval: 3, // 轮播间隔时间（秒）
 		},
 
 		waves: {
@@ -160,7 +172,6 @@ export const siteConfig: SiteConfig = {
 
 		credit: {
 			enable: true, // 显示横幅图片来源文本
-
 			text: "Web", // 要显示的来源文本
 			url: "", // （可选）原始艺术品或艺术家页面的 URL 链接
 		},
@@ -209,32 +220,44 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.webp",
-			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
-			"/assets/desktop-banner/4.webp",
-			"/assets/desktop-banner/5.webp",
-			"/assets/desktop-banner/6.webp",
-		], // 桌面横幅图片
-		mobile: [
-			"https://img.likefirefly.com/firefly-13-4.jpg",
-				"https://img.likefirefly.com/firefly-24-6.png",
-				"https://img.likefirefly.com/firefly-24-13.jpg",
-				"https://img.likefirefly.com/firefly-36-3.png",
-				"https://img.likefirefly.com/firefly-36-6.jpg",
-				"https://img.likefirefly.com/firefly-36-9.png",
-				"https://img.likefirefly.com/firefly-36-11.png",
-				"https://img.likefirefly.com/firefly-36-12.png",
-				"https://img.likefirefly.com/firefly-4-2.png",
-				"https://img.likefirefly.com/firefly-4-10.jpg",
-				"https://img.likefirefly.com/firefly-4-11.png",
-				"https://img.likefirefly.com/firefly-42-10.png",
-		], // 移动横幅图片
+				"https://firefly.cuteleaf.cn/assets/images/d1.webp",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdb472f7.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabe26a1c3.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc452c0.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb33302fc.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb37c87ca.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692abb3ac429f.jpg",
+				"https://img.cdn1.vip/i/692ae5b42d74d_1764418996.webp",
+				"https://img.cdn1.vip/i/692ae6347c4ef_1764419124.webp",
+				"https://img.cdn1.vip/i/692ae6be2c979_1764419262.webp",
+				"https://img.cdn1.vip/i/692ae6f298a96_1764419314.webp",
+				
+			], // 桌面横幅图片
+			mobile: [
+				"https://a2cy.com/d/file/phone/list/cos/2025-10-12/e2faf75b7f3ceaab06763b330a25a30c.jpg",
+				"https://a2cy.com/d/file/phone/coser/show/2020-01-16/acea91ca575834691c268033daa4d06c.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc5f0af.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc71a96.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcc452c0.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabce4fdd9.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabcd3c1fa.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabd887239.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabd97608c.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdbe89db.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabdbc0bf8.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692aabe2625af.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692ab9433f5e6.jpg",
+				"https://youke1.picui.cn/s1/2025/11/29/692ae4906d0ea.jpg",
+				"https://img.cdn1.vip/i/692ae4ff2436f_1764418815.webp",
+				"https://img.cdn1.vip/i/692ae5cb6cca3_1764419019.webp",
+				"https://img.cdn1.vip/i/692ae63b55ad1_1764419131.webp",
+				"https://img.cdn1.vip/i/692ae6c50720d_1764419269.webp",
+			], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
 		enable: true, // 启用轮播
-		interval: 5, // 轮播间隔时间（秒）
+		interval: 3, // 轮播间隔时间（秒）
 	},
 	zIndex: -1, // 层级，确保壁纸在背景层
 	opacity: 0.8, // 壁纸透明度
@@ -350,7 +373,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/preview.jpg", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "https://img.cdn1.vip/i/692ae7abb921c_1764419499.webp",//"assets/images/preview.jpg", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "Zhang San",
 	bio: "Stay Hungry, Stay Foolish",
 	typewriter: {
@@ -395,7 +418,7 @@ export const licenseConfig: LicenseConfig = {
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// 注意：某些样式（如背景颜色）已被覆盖，请参阅 astro.config.mjs 文件。
 	// 请选择深色主题，因为此博客主题目前仅支持深色背景
-	theme: "github-dark",
+	theme: "one-dark-pro",
 	// 是否在主题切换时隐藏代码块以避免卡顿问题
 	hideDuringThemeTransition: true,
 };
@@ -404,7 +427,7 @@ export const commentConfig: CommentConfig = {
 	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
-		lang: "en", // 设置 Twikoo 评论系统语言为英文
+		lang: "zh-CN", // 设置 Twikoo 评论系统语言为中文
 	},
 };
 
@@ -621,7 +644,7 @@ export const sakuraConfig: SakuraConfig = {
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
 	enable: true, // 启用看板娘
-	models: ["/pio/models/pio/model.json"], // 默认模型路径
+	models: ["/pio/models/live2d/snow_miku/model.json"], // 默认模型路径
 	position: "left", // 默认位置在右侧
 	width: 280, // 默认宽度
 	height: 250, // 默认高度
