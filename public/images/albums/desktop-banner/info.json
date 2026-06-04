@@ -1,0 +1,10 @@
+{
+  "title": "wow",
+  "description": "好看的",
+  "date": "2026-06-04",
+  "location": "web",
+  "tags": ["二次元", "jk", "美少女"],
+  "layout": "masonry",
+  "columns": 3,
+  "hidden": false
+}
