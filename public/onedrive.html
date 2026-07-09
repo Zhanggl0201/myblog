@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sherry - OneDrive</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet"
+		/>
+		<style>
+			*,
+			*::before,
+			*::after {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--card-bg: rgba(20, 20, 20, 0.65);
+				--card-border: rgba(255, 255, 255, 0.12);
+				--card-hover-border: rgba(255, 255, 255, 0.25);
+				--text-primary: #f5f5f5;
+				--text-secondary: rgba(255, 255, 255, 0.7);
+				--accent: #4a9eff;
+				--radius: 16px;
+				--page-width: 1400px;
+			}
+
+			body {
+				font-family: "Noto Sans SC", sans-serif;
+				color: var(--text-primary);
+				min-height: 100vh;
+				background: #0a0a0a;
+				overflow-x: hidden;
+			}
+
+			/* ===== 渐变背景 ===== */
+			.bg-gradient {
+				position: fixed;
+				inset: 0;
+				z-index: 0;
+				background:
+					radial-gradient(
+						ellipse at 20% 0%,
+						rgba(74, 158, 255, 0.15) 0%,
+						transparent 50%
+					),
+					radial-gradient(
+						ellipse at 80% 100%,
+						rgba(120, 80, 255, 0.1) 0%,
+						transparent 50%
+					),
+					#0a0a0a;
+			}
+
+			/* ===== 导航栏 ===== */
+			.navbar {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+				height: 4.5rem;
+				display: flex;
+				align-items: center;
+				padding: 0 2rem;
+				max-width: var(--page-width);
+				margin: 0 auto;
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+			}
+
+			.navbar a {
+				text-decoration: none;
+				color: var(--text-primary);
+				font-weight: 700;
+				font-size: 1.1rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				transition: opacity 0.2s;
+			}
+
+			.navbar a:hover {
+				opacity: 0.8;
+			}
+
+			.navbar-logo {
+				width: 1.75rem;
+				height: 1.75rem;
+				object-fit: contain;
+			}
+
+			.nav-right {
+				margin-left: auto;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.nav-link {
+				font-size: 0.9rem !important;
+				font-weight: 500 !important;
+				color: var(--text-secondary) !important;
+			}
+
+			.nav-link .material-symbols-outlined {
+				font-size: 1.25rem;
+			}
+
+			/* ===== 主内容 ===== */
+			.main-content {
+				position: relative;
+				z-index: 1;
+				padding: 6rem 2rem 4rem;
+				max-width: var(--page-width);
+				margin: 0 auto;
+			}
+
+			/* ===== 页面标题 ===== */
+			.page-header {
+				text-align: center;
+				margin-bottom: 3rem;
+				animation: fadeUp 0.8s ease-out both;
+			}
+
+			.page-title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				margin-bottom: 0.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.75rem;
+			}
+
+			.page-title .material-symbols-outlined {
+				font-size: 2.2rem;
+				color: var(--accent);
+			}
+
+			.page-subtitle {
+				font-size: 1rem;
+				color: var(--text-secondary);
+				font-weight: 300;
+			}
+
+			/* ===== 区块 ===== */
+			.section {
+				margin-bottom: 3rem;
+				animation: fadeUp 0.8s ease-out both;
+			}
+
+			.section:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+			.section:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+			.section:nth-child(3) {
+				animation-delay: 0.3s;
+			}
+
+			.section-header {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				margin-bottom: 1.25rem;
+				padding-left: 0.5rem;
+			}
+
+			.section-icon {
+				font-size: 1.5rem;
+				color: var(--accent);
+			}
+
+			.section-title {
+				font-size: 1.3rem;
+				font-weight: 700;
+			}
+
+			.section-count {
+				font-size: 0.75rem;
+				color: var(--text-secondary);
+				background: rgba(255, 255, 255, 0.08);
+				padding: 0.2rem 0.6rem;
+				border-radius: 12px;
+			}
+
+			/* ===== 网格 ===== */
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+				gap: 1.25rem;
+			}
+
+			.embed-card {
+				background: var(--card-bg);
+				border: 1px solid var(--card-border);
+				border-radius: var(--radius);
+				overflow: hidden;
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				transition: all 0.3s ease;
+			}
+
+			.embed-card:hover {
+				border-color: var(--card-hover-border);
+				transform: translateY(-2px);
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			}
+
+			.embed-card-header {
+				padding: 1rem 1.25rem;
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				border-bottom: 1px solid var(--card-border);
+			}
+
+			.embed-card-icon {
+				font-size: 1.25rem;
+				color: var(--accent);
+			}
+
+			.embed-card-title {
+				font-size: 0.95rem;
+				font-weight: 500;
+				flex: 1;
+			}
+
+			.embed-card-link {
+				font-size: 0.8rem;
+				color: var(--accent);
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+				transition: opacity 0.2s;
+			}
+
+			.embed-card-link:hover {
+				opacity: 0.7;
+			}
+
+			.embed-card-link .material-symbols-outlined {
+				font-size: 1rem;
+			}
+
+			.embed-card-body {
+				padding: 0;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 200px;
+			}
+
+			.embed-card-body iframe {
+				width: 100%;
+				height: 400px;
+				border: none;
+			}
+
+			.folder-link {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				text-align: center;
+				color: var(--text-secondary);
+				text-decoration: none;
+				width: 100%;
+				height: 100%;
+				transition: all 0.3s;
+			}
+
+			.folder-link:hover {
+				color: var(--accent);
+			}
+
+			.folder-link .material-symbols-outlined {
+				font-size: 3rem;
+				margin-bottom: 0.75rem;
+				color: var(--accent);
+			}
+
+			.folder-link p {
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.folder-link .link-hint {
+				font-size: 0.75rem;
+				opacity: 0.6;
+			}
+
+			/* ===== 空状态 ===== */
+			.empty-state {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 3rem;
+				text-align: center;
+				color: var(--text-secondary);
+			}
+
+			.empty-state .material-symbols-outlined {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+				opacity: 0.4;
+			}
+
+			/* ===== 页脚 ===== */
+			.footer {
+				position: relative;
+				z-index: 1;
+				text-align: center;
+				padding: 2rem;
+				font-size: 0.8rem;
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			.footer a {
+				color: rgba(255, 255, 255, 0.6);
+				text-decoration: none;
+				transition: color 0.2s;
+			}
+
+			.footer a:hover {
+				color: var(--accent);
+			}
+
+			.footer-divider {
+				margin: 0 0.5rem;
+			}
+
+			/* ===== 动画 ===== */
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* ===== 响应式 ===== */
+			@media (max-width: 900px) {
+				.grid {
+					grid-template-columns: 1fr;
+				}
+				.page-title {
+					font-size: 1.8rem;
+				}
+				.main-content {
+					padding: 6rem 1rem 3rem;
+				}
+			}
+
+			@media (max-width: 600px) {
+				.navbar {
+					padding: 0 1rem;
+				}
+				.nav-right {
+					display: none;
+				}
+				.embed-card-body iframe {
+					height: 300px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg-gradient"></div>
+
+		<!-- 导航栏 -->
+		<nav class="navbar">
+			<a href="https://sherry.qzz.io">
+				<img
+					src="https://blog.sherry.qzz.io/assets/home/home.webp"
+					alt="logo"
+					class="navbar-logo"
+				/>
+				Yunfan Tech
+			</a>
+			<div class="nav-right">
+				<a
+					href="https://blog.sherry.qzz.io"
+					class="nav-link"
+					target="_blank"
+				>
+					<span class="material-symbols-outlined">article</span>
+					博客
+				</a>
+				<a
+					href="https://github.com/Zhanggl0201"
+					class="nav-link"
+					target="_blank"
+				>
+					<span class="material-symbols-outlined">code</span>
+					GitHub
+				</a>
+			</div>
+		</nav>
+
+		<!-- 主内容 -->
+		<main class="main-content">
+			<div class="page-header">
+				<h1 class="page-title">
+					<span class="material-symbols-outlined">cloud</span>
+					OneDrive 资源库
+				</h1>
+				<p class="page-subtitle">文件存储与共享中心</p>
+			</div>
+
+			<!-- ==================== 区块 1 ==================== -->
+			<div class="section">
+				<div class="section-header">
+					<span class="material-symbols-outlined section-icon"
+						>folder</span
+					>
+					<h2 class="section-title">学习资料</h2>
+					<span class="section-count">3 个文件夹</span>
+				</div>
+				<div class="grid">
+					<!-- 嵌入 1 -->
+					<div class="embed-card">
+						<div class="embed-card-header">
+							<span
+								class="material-symbols-outlined embed-card-icon"
+								>folder_open</span
+							>
+							<span class="embed-card-title">C++ 课程资料</span>
+							<a
+								href="https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgBZFcsCI9M6TLIjfoM7njWGAYe1TiBcUvOaGscbRxH-ngk?e=4FyX8U"
+								class="embed-card-link"
+								target="_blank"
+							>
+								打开
+								<span class="material-symbols-outlined"
+									>open_in_new</span
+								>
+							</a>
+						</div>
+						<div class="embed-card-body">
+							<a
+								href="https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgBZFcsCI9M6TLIjfoM7njWGAYe1TiBcUvOaGscbRxH-ngk?e=4FyX8U"
+								class="folder-link"
+								target="_blank"
+							>
+								<span class="material-symbols-outlined"
+									>folder_open</span
+								>
+								<p>C++ 课程资料</p>
+								<span class="link-hint">点击打开文件夹</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- 嵌入 2 -->
+					<div class="embed-card">
+						<div class="embed-card-header">
+							<span
+								class="material-symbols-outlined embed-card-icon"
+								>folder_open</span
+							>
+							<span class="embed-card-title">Python 笔记</span>
+							<a
+								href="https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgBZFcsCI9M6TLIjfoM7njWGAYe1TiBcUvOaGscbRxH-ngk?e=4FyX8U"
+								class="embed-card-link"
+								target="_blank"
+							>
+								打开
+								<span class="material-symbols-outlined"
+									>open_in_new</span
+								>
+							</a>
+						</div>
+						<div class="embed-card-body">
+							<div class="empty-state">
+								<span class="material-symbols-outlined"
+									>cloud_upload</span
+								>
+								<p>将 OneDrive 嵌入 iframe 粘贴到此处</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 嵌入 3 -->
+					<div class="embed-card">
+						<div class="embed-card-header">
+							<span
+								class="material-symbols-outlined embed-card-icon"
+								>folder_open</span
+							>
+							<span class="embed-card-title">项目文档</span>
+							<a
+								href="https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgBZFcsCI9M6TLIjfoM7njWGAYe1TiBcUvOaGscbRxH-ngk?e=4FyX8U"
+								class="embed-card-link"
+								target="_blank"
+							>
+								打开
+								<span class="material-symbols-outlined"
+									>open_in_new</span
+								>
+							</a>
+						</div>
+						<div class="embed-card-body">
+							<div class="empty-state">
+								<span class="material-symbols-outlined"
+									>cloud_upload</span
+								>
+								<p>将 OneDrive 嵌入 iframe 粘贴到此处</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ==================== 区块 2 ==================== -->
+			<div class="section">
+				<div class="section-header">
+					<span class="material-symbols-outlined section-icon"
+						>photo_library</span
+					>
+					<h2 class="section-title">图片资源</h2>
+					<span class="section-count">0 个文件夹</span>
+				</div>
+				<div class="grid">
+					<!-- 在此添加更多嵌入卡片 -->
+				</div>
+			</div>
+
+			<!-- ==================== 区块 3 ==================== -->
+			<div class="section">
+				<div class="section-header">
+					<span class="material-symbols-outlined section-icon"
+						>movie</span
+					>
+					<h2 class="section-title">视频资源</h2>
+					<span class="section-count">0 个文件夹</span>
+				</div>
+				<div class="grid">
+					<!-- 在此添加更多嵌入卡片 -->
+				</div>
+			</div>
+		</main>
+
+		<!-- 页脚 -->
+		<footer class="footer">
+			<span>© <span id="footerYear"></span> Yunfan Tech</span>
+			<span class="footer-divider">|</span>
+			<span
+				>Powered by
+				<a href="https://sherry.qzz.io" target="_blank">Sherry</a></span
+			>
+		</footer>
+
+		<script>
+			document.getElementById("footerYear").textContent =
+				new Date().getFullYear();
+		</script>
+	</body>
+</html>

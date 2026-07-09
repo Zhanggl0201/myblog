@@ -1,4 +1,5 @@
 {
+	"mode": "external",
 	"title": "Some lovely pictures",
 	"hidden": false,
 	"description": "The world is vast, and you have to go explore it.",
@@ -6,5 +7,92 @@
 	"location": "Bilibili",
 	"tags": ["Kawai", "Cute", "Moe"],
 	"layout": "masonry",
-	"columns": 3
+	"columns": 3,
+	"cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/cover.webp",
+	"photos": [
+		{
+			"id": "1",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/1.webp"
+		},
+		{
+			"id": "2",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/2.webp"
+		},
+		{
+			"id": "3",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/3.webp"
+		},
+		{
+			"id": "4",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/4.webp"
+		},
+		{
+			"id": "5",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/5.webp"
+		},
+		{
+			"id": "6",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/6.webp"
+		},
+		{
+			"id": "7",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/7.webp"
+		},
+		{
+			"id": "8",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/8.webp"
+		},
+		{
+			"id": "9",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/9.webp"
+		},
+		{
+			"id": "10",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/10.webp"
+		},
+		{
+			"id": "11",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/11.webp"
+		},
+		{
+			"id": "12",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/12.webp"
+		},
+		{
+			"id": "13",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/13.webp"
+		},
+		{
+			"id": "14",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/14.webp"
+		},
+		{
+			"id": "15",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/15.webp"
+		},
+		{
+			"id": "16",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/16.webp"
+		},
+		{
+			"id": "17",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/17.webp"
+		},
+		{
+			"id": "18",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/18.webp"
+		},
+		{
+			"id": "19",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/19.webp"
+		},
+		{
+			"id": "20",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/20.webp"
+		},
+		{
+			"id": "21",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/21.webp"
+		}
+	]
 }

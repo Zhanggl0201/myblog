@@ -24,8 +24,8 @@ import { LinkPreset } from "./types/config";
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
-	title: "线性代数",
-	subtitle: "全是好东西的地方",
+	title: "金字招牌",
+	subtitle: "",
 	siteURL: "https://blog.sherry.qzz.io/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-10-01", // 站点开始运行日期，用于站点统计组件计算运行天数
 
@@ -125,36 +125,36 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/images/albums/desktop-banner/1.webp",
-				"/images/albums/desktop-banner/2.webp",
-				"/images/albums/desktop-banner/3.webp",
-				"/images/albums/desktop-banner/4.webp",
-				"/images/albums/desktop-banner/5.webp",
-				"/images/albums/desktop-banner/6.webp",
-				"/images/albums/desktop-banner/7.webp",
-				"/images/albums/desktop-banner/8.webp",
-				"/images/albums/desktop-banner/9.webp",
-				"/images/albums/desktop-banner/10.webp",
-				"/images/albums/desktop-banner/11.webp",
-				"/images/albums/desktop-banner/12.webp",
-				"/images/albums/desktop-banner/13.webp",
-				"/images/albums/desktop-banner/14.jpg",
-				"/images/albums/desktop-banner/15.webp",
-				"/images/albums/desktop-banner/16.webp",
-				"/images/albums/desktop-banner/17.webp",
-				"/images/albums/desktop-banner/18.webp",
-				"/images/albums/desktop-banner/19.webp",
-				"/images/albums/desktop-banner/20.webp",
-				"/images/albums/desktop-banner/21.webp",
-				"/images/albums/desktop-banner/22.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/1.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/2.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/3.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/4.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/5.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/6.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/7.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/8.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/9.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/10.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/11.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/12.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/13.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/14.jpg",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/15.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/16.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/17.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/18.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/19.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/20.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/21.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/22.webp",
 			], // 桌面横幅图片
 			mobile: [
-				"/images/albums/mobile-banner/1.webp",
-				"/images/albums/mobile-banner/2.webp",
-				"/images/albums/mobile-banner/3.webp",
-				"/images/albums/mobile-banner/4.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/1.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/2.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/3.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/4.webp",
 			], // 移动横幅图片
-		}, // 使用本地横幅图片
+		}, // 使用 jsDelivr CDN 加速图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
 
@@ -180,7 +180,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "我要洋人死", // 主页横幅主标题
+			title: "金字招牌", // 主页横幅主标题
 
 			subtitle: [
 				"把头剁了喂狗",
@@ -196,6 +196,10 @@ export const siteConfig: SiteConfig = {
 				"要写方案",
 				"第一年打基础，第二年上台阶，第三年创辉煌",
 				"打直臂",
+				"求其上者的其中",
+				"批判的武器代替不了武器的批判",
+				"zero",
+				"前50%,后20%",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -271,39 +275,39 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/images/albums/desktop-banner/1.webp",
-			"/images/albums/desktop-banner/2.webp",
-			"/images/albums/desktop-banner/3.webp",
-			"/images/albums/desktop-banner/4.webp",
-			"/images/albums/desktop-banner/5.webp",
-			"/images/albums/desktop-banner/6.webp",
-			"/images/albums/desktop-banner/7.webp",
-			"/images/albums/desktop-banner/8.webp",
-			"/images/albums/desktop-banner/9.webp",
-			"/images/albums/desktop-banner/10.webp",
-			"/images/albums/desktop-banner/11.webp",
-			"/images/albums/desktop-banner/12.webp",
-			"/images/albums/desktop-banner/13.webp",
-			"/images/albums/desktop-banner/14.jpg",
-			"/images/albums/desktop-banner/15.webp",
-			"/images/albums/desktop-banner/16.webp",
-			"/images/albums/desktop-banner/17.webp",
-			"/images/albums/desktop-banner/18.webp",
-			"/images/albums/desktop-banner/19.webp",
-			"/images/albums/desktop-banner/20.webp",
-			"/images/albums/desktop-banner/21.webp",
-			"/images/albums/desktop-banner/22.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/1.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/2.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/3.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/4.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/5.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/6.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/7.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/8.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/9.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/10.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/11.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/12.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/13.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/14.jpg",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/15.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/16.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/17.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/18.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/19.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/20.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/21.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/22.webp",
 		], // 桌面横幅图片
 		mobile: [
-			"/images/albums/mobile-banner/1.webp",
-			"/images/albums/mobile-banner/2.webp",
-			"/images/albums/mobile-banner/3.webp",
-			"/images/albums/mobile-banner/4.webp",
-			"/images/albums/mobile-banner/5.webp",
-			"/images/albums/mobile-banner/6.webp",
-			"/images/albums/mobile-banner/7.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/1.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/2.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/3.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/4.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/5.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/6.webp",
+			"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/mobile-banner/7.webp",
 		], // 移动横幅图片
-	}, // 使用本地横幅图片
+	}, // 使用 jsDelivr CDN 加速图片
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
 		enable: true, // 启用轮播
@@ -348,6 +352,12 @@ export const navBarConfig: NavBarConfig = {
 					external: true,
 					icon: "fa6-brands:microsoft",
 				},
+				{
+					name: "Cloud",
+					url: "https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgC6aqFOVZpPQp0EkqSLuANqAVHDzTDk38f8QsaGW1blhKQ?e=irLLmP",
+					external: true,
+					icon: "material-symbols:cloud",
+				},
 			],
 		},
 		{
@@ -391,9 +401,9 @@ export const profileConfig: ProfileConfig = {
 	},
 	links: [
 		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/400284383",
+			name: "Sherry",
+			icon: "material-symbols:person",
+			url: "https://sherry.qzz.io",
 		},
 		{
 			name: "Educoder",
@@ -672,7 +682,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: true, // 禁用看板娘以提升性能
+	enable: false, // 禁用看板娘以提升性能
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 模型位置
 	width: 280, // 默认宽度

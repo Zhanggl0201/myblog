@@ -1,0 +1,98 @@
+{
+  "mode": "external",
+  "title": "Stelle",
+  "hidden": false,
+  "description": "Stelle's photos in Honkai Star Rail",
+  "date": "2026-06-06",
+  "location": "Bilibili",
+  "tags": [
+    "HonkaiStarRail",
+    "mihoyo",
+    "Stelle"
+  ],
+  "layout": "masonry",
+  "columns": 3,
+  "cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/001.webp",
+  "photos": [
+    {
+      "id": "1",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/001.webp"
+    },
+    {
+      "id": "2",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/002.webp"
+    },
+    {
+      "id": "3",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/003.webp"
+    },
+    {
+      "id": "4",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/004.webp"
+    },
+    {
+      "id": "5",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/005.webp"
+    },
+    {
+      "id": "6",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/006.webp"
+    },
+    {
+      "id": "7",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/007.webp"
+    },
+    {
+      "id": "8",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/008.webp"
+    },
+    {
+      "id": "9",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/009.webp"
+    },
+    {
+      "id": "10",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/010.webp"
+    },
+    {
+      "id": "11",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/011.webp"
+    },
+    {
+      "id": "12",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/012.webp"
+    },
+    {
+      "id": "13",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/013.webp"
+    },
+    {
+      "id": "14",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/014.webp"
+    },
+    {
+      "id": "15",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/015.webp"
+    },
+    {
+      "id": "16",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/016.webp"
+    },
+    {
+      "id": "17",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/017.webp"
+    },
+    {
+      "id": "18",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/018.webp"
+    },
+    {
+      "id": "19",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/019.webp"
+    },
+    {
+      "id": "20",
+      "src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Stelle/020.webp"
+    }
+  ]
+}

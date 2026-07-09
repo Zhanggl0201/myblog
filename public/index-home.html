@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yunfan Tech</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet"
+		/>
+		<style>
+			*,
+			*::before,
+			*::after {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--card-bg: rgba(20, 20, 20, 0.65);
+				--card-border: rgba(255, 255, 255, 0.12);
+				--card-hover-border: rgba(255, 255, 255, 0.25);
+				--text-primary: #f5f5f5;
+				--text-secondary: rgba(255, 255, 255, 0.7);
+				--accent: #4a9eff;
+				--radius: 16px;
+				--page-width: 1200px;
+			}
+
+			body {
+				font-family: "Noto Sans SC", sans-serif;
+				color: var(--text-primary);
+				min-height: 100vh;
+				overflow-x: hidden;
+				background: #0a0a0a;
+			}
+
+			/* ===== 全屏轮播背景 ===== */
+			.bg-carousel {
+				position: fixed;
+				inset: 0;
+				z-index: 0;
+			}
+
+			.bg-carousel::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.4) 0%,
+					rgba(0, 0, 0, 0.2) 30%,
+					rgba(0, 0, 0, 0.5) 100%
+				);
+				z-index: 1;
+			}
+
+			.bg-slide {
+				position: absolute;
+				inset: 0;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				transition: opacity 2s ease-in-out;
+				filter: blur(1px) brightness(1);
+				transform: scale(1.05);
+			}
+
+			.bg-slide.active {
+				opacity: 1;
+			}
+
+			/* ===== 导航栏 ===== */
+			.navbar {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+				height: 4.5rem;
+				display: flex;
+				align-items: center;
+				padding: 0 2rem;
+				max-width: var(--page-width);
+				margin: 0 auto;
+				transition: all 0.3s ease;
+			}
+
+			.navbar a {
+				text-decoration: none;
+				color: var(--text-primary);
+				font-weight: 700;
+				font-size: 1.1rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				transition: opacity 0.2s;
+			}
+
+			.navbar a:hover {
+				opacity: 0.8;
+			}
+
+			.navbar-logo {
+				width: 1.75rem;
+				height: 1.75rem;
+				object-fit: contain;
+			}
+
+			.navbar .material-symbols-outlined {
+				font-size: 1.75rem;
+			}
+
+			.nav-right {
+				margin-left: auto;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.nav-link {
+				font-size: 0.9rem !important;
+				font-weight: 500 !important;
+				color: var(--text-secondary) !important;
+			}
+
+			/* ===== 主内容 ===== */
+			.main-content {
+				position: relative;
+				z-index: 2;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				padding-top: 6rem;
+			}
+
+			/* ===== 时间模块 ===== */
+			.clock-module {
+				text-align: center;
+				margin-bottom: 3.5rem;
+				animation: fadeUp 0.8s ease-out both;
+			}
+
+			.clock-date {
+				font-size: 0.95rem;
+				font-weight: 300;
+				color: var(--text-secondary);
+				letter-spacing: 0.1em;
+				margin-bottom: 0.5rem;
+			}
+
+			.clock-weekday {
+				font-size: 0.85rem;
+				font-weight: 400;
+				color: var(--accent);
+				margin-bottom: 1rem;
+			}
+
+			.clock-time {
+				font-family: "JetBrains Mono", monospace;
+				font-size: 4.5rem;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				line-height: 1;
+				text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+			}
+
+			.clock-time .seconds {
+				font-size: 1.8rem;
+				color: var(--text-secondary);
+				vertical-align: super;
+				margin-left: 0.2rem;
+				font-weight: 400;
+			}
+
+			.clock-greeting {
+				margin-top: 1rem;
+				font-size: 1.1rem;
+				font-weight: 300;
+				color: var(--text-secondary);
+			}
+
+			/* ===== 三模块卡片 ===== */
+			.modules {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5rem;
+				width: 100%;
+				max-width: var(--page-width);
+			}
+
+			.module-card {
+				background: var(--card-bg);
+				border: 1px solid var(--card-border);
+				border-radius: var(--radius);
+				padding: 2rem;
+				text-decoration: none;
+				color: var(--text-primary);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				min-height: 200px;
+				justify-content: center;
+			}
+
+			.module-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					var(--accent),
+					transparent
+				);
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+
+			.module-card:hover {
+				border-color: var(--card-hover-border);
+				transform: translateY(-4px);
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			}
+
+			.module-card:hover::before {
+				opacity: 1;
+			}
+
+			.module-icon {
+				font-size: 2.5rem;
+				color: var(--accent);
+				transition: transform 0.3s;
+			}
+
+			.module-card:hover .module-icon {
+				transform: scale(1.1);
+			}
+
+			.module-title {
+				font-size: 1.15rem;
+				font-weight: 700;
+			}
+
+			.module-desc {
+				font-size: 0.85rem;
+				color: var(--text-secondary);
+				text-align: center;
+				line-height: 1.6;
+			}
+
+			.module-status {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				font-size: 0.75rem;
+				color: var(--accent);
+				background: rgba(74, 158, 255, 0.1);
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				margin-top: 0.5rem;
+			}
+
+			.module-status .dot {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background: var(--accent);
+				animation: pulse 2s infinite;
+			}
+
+			.module-status.coming-soon {
+				color: rgba(255, 255, 255, 0.5);
+				background: rgba(255, 255, 255, 0.05);
+			}
+
+			.module-status.coming-soon .dot {
+				background: rgba(255, 255, 255, 0.3);
+				animation: none;
+			}
+
+			/* ===== 页脚 ===== */
+			.footer {
+				position: relative;
+				z-index: 2;
+				text-align: center;
+				padding: 2rem;
+				font-size: 0.8rem;
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			.footer a {
+				color: rgba(255, 255, 255, 0.6);
+				text-decoration: none;
+				transition: color 0.2s;
+			}
+
+			.footer a:hover {
+				color: var(--accent);
+			}
+
+			.footer-divider {
+				margin: 0 0.5rem;
+			}
+
+			/* ===== 动画 ===== */
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes pulse {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0.4;
+				}
+			}
+
+			.module-card:nth-child(1) {
+				animation: fadeUp 0.8s ease-out 0.2s both;
+			}
+			.module-card:nth-child(2) {
+				animation: fadeUp 0.8s ease-out 0.35s both;
+			}
+			.module-card:nth-child(3) {
+				animation: fadeUp 0.8s ease-out 0.5s both;
+			}
+
+			/* ===== 响应式 ===== */
+			@media (max-width: 900px) {
+				.modules {
+					grid-template-columns: 1fr;
+					max-width: 400px;
+				}
+				.clock-time {
+					font-size: 3rem;
+				}
+				.clock-time .seconds {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (max-width: 600px) {
+				.navbar {
+					padding: 0 1rem;
+				}
+				.nav-right {
+					display: none;
+				}
+				.main-content {
+					padding-top: 5rem;
+				}
+				.clock-time {
+					font-size: 2.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 全屏轮播背景 -->
+		<div class="bg-carousel" id="bgCarousel"></div>
+
+		<!-- 导航栏 -->
+		<nav class="navbar">
+			<a href="#">
+				<img
+					src="https://blog.sherry.qzz.io/assets/home/home.webp"
+					alt="logo"
+					class="navbar-logo"
+				/>
+				Yunfan Tech
+			</a>
+			<div class="nav-right">
+				<a
+					href="https://github.com/Zhanggl0201"
+					class="nav-link"
+					target="_blank"
+				>
+					<span class="material-symbols-outlined"></span>
+					GitHub
+				</a>
+			</div>
+		</nav>
+
+		<!-- 主内容 -->
+		<main class="main-content">
+			<!-- 时间模块 -->
+			<div class="clock-module">
+				<div class="clock-date" id="clockDate"></div>
+				<div class="clock-weekday" id="clockWeekday"></div>
+				<div class="clock-time" id="clockTime"></div>
+				<div class="clock-greeting" id="clockGreeting"></div>
+			</div>
+
+			<!-- 三模块 -->
+			<div class="modules">
+				<!-- 博客 -->
+				<a
+					href="https://blog.sherry.qzz.io"
+					class="module-card"
+					target="_blank"
+				>
+					<span class="material-symbols-outlined module-icon"
+						>article</span
+					>
+					<div class="module-title">博客</div>
+					<div class="module-desc">记录学习与技术分享</div>
+					<div class="module-status">
+						<span class="dot"></span>
+						在线
+					</div>
+				</a>
+
+				<!-- 网盘 -->
+				<a
+					href="https://mz5k-my.sharepoint.com/:f:/g/personal/zhugeliang_mz5k_onmicrosoft_com/IgC6aqFOVZpPQp0EkqSLuANqAVHDzTDk38f8QsaGW1blhKQ?e=irLLmP"
+					class="module-card"
+					id="cloudLink"
+					target="_blank"
+				>
+					<span class="material-symbols-outlined module-icon"
+						>cloud</span
+					>
+					<div class="module-title">资源分享</div>
+					<div class="module-status">
+						<span class="dot"></span>
+						在线
+					</div>
+				</a>
+
+				<!-- 学习系统 -->
+				<a href="#" class="module-card" id="learningLink">
+					<span class="material-symbols-outlined module-icon"
+						>school</span
+					>
+					<div class="module-title">学习系统</div>
+					<div class="module-status coming-soon">
+						<span class="dot"></span>
+						敬请期待
+					</div>
+				</a>
+			</div>
+		</main>
+
+		<!-- 页脚 -->
+		<footer class="footer">
+			<span>© <span id="footerYear"></span> Yunfan Tech</span>
+			<span class="footer-divider">|</span>
+			<span
+				>Powered by
+				<a href="https://vercel.com" target="_blank">Vercel</a></span
+			>
+		</footer>
+
+		<script>
+			// ===== 轮播背景 - 动态生成所有相册图片 =====
+			const CDN =
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main";
+			const bgImages = [];
+
+			// 相册配置: [文件夹路径, 图片数量, 编号位数, 文件格式]
+			const albums = [
+				["desktop-banner", 22, 1, "webp"],
+				["mobile-banner", 7, 1, "webp"],
+				["AcgExample", 21, 1, "webp"],
+				["HonkaiStarRail/Firefly", 689, 3, "webp"],
+				["HonkaiStarRail/Robin", 4, 3, "webp"],
+				["HonkaiStarRail/RuanMei", 51, 3, "webp"],
+				["HonkaiStarRail/SilverWolf", 10, 3, "webp"],
+				["HonkaiStarRail/Stelle", 20, 3, "webp"],
+				["HonkaiStarRail/Topaz", 10, 3, "webp"],
+				["HonkaiStarRail/March7th", 10, 3, "webp"],
+				["HonkaiStarRail/Jingliu", 10, 3, "webp"],
+				["HonkaiStarRail/FuXuan", 10, 3, "webp"],
+			];
+
+			albums.forEach(([folder, count, pad, ext]) => {
+				for (let i = 1; i <= count; i++) {
+					bgImages.push(
+						`${CDN}/${folder}/${String(i).padStart(pad, "0")}.${ext}`,
+					);
+				}
+			});
+
+			// desktop-banner 第14张是 jpg
+			bgImages[13] = `${CDN}/desktop-banner/14.jpg`;
+
+			// 随机打乱顺序
+			for (let i = bgImages.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[bgImages[i], bgImages[j]] = [bgImages[j], bgImages[i]];
+			}
+
+			const carousel = document.getElementById("bgCarousel");
+			let currentSlide = 0;
+
+			// 只创建2个slide元素，交替使用（懒加载，不卡）
+			const slideA = document.createElement("div");
+			const slideB = document.createElement("div");
+			slideA.className = "bg-slide active";
+			slideB.className = "bg-slide";
+			slideA.style.backgroundImage = `url('${bgImages[0]}')`;
+			carousel.appendChild(slideA);
+			carousel.appendChild(slideB);
+
+			// 预加载下一张
+			function preloadImage(index) {
+				const img = new Image();
+				img.src = bgImages[index];
+			}
+			preloadImage(1);
+
+			let activeSlide = slideA;
+			let inactiveSlide = slideB;
+
+			setInterval(() => {
+				currentSlide = (currentSlide + 1) % bgImages.length;
+				inactiveSlide.style.backgroundImage = `url('${bgImages[currentSlide]}')`;
+				inactiveSlide.classList.add("active");
+				activeSlide.classList.remove("active");
+				[activeSlide, inactiveSlide] = [inactiveSlide, activeSlide];
+				// 预加载下一张
+				const nextIdx = (currentSlide + 1) % bgImages.length;
+				preloadImage(nextIdx);
+			}, 5000);
+
+			// ===== 时间模块 =====
+			const weekdays = [
+				"星期日",
+				"星期一",
+				"星期二",
+				"星期三",
+				"星期四",
+				"星期五",
+				"星期六",
+			];
+
+			function updateClock() {
+				const now = new Date();
+				const hours = String(now.getHours()).padStart(2, "0");
+				const minutes = String(now.getMinutes()).padStart(2, "0");
+				const seconds = String(now.getSeconds()).padStart(2, "0");
+
+				document.getElementById("clockTime").innerHTML =
+					`${hours}:${minutes}<span class="seconds">${seconds}</span>`;
+				document.getElementById("clockDate").textContent =
+					`${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
+				document.getElementById("clockWeekday").textContent =
+					weekdays[now.getDay()];
+
+				const h = now.getHours();
+				let greeting = "夜深了，注意休息";
+				if (h >= 5 && h < 12) greeting = "早上好，新的一天开始了";
+				else if (h >= 12 && h < 14) greeting = "中午好，记得午休";
+				else if (h >= 14 && h < 18) greeting = "下午好，继续加油";
+				else if (h >= 18 && h < 22) greeting = "晚上好，辛苦了一天";
+
+				document.getElementById("clockGreeting").textContent = greeting;
+			}
+
+			updateClock();
+			setInterval(updateClock, 1000);
+
+			// ===== 页脚年份 =====
+			document.getElementById("footerYear").textContent =
+				new Date().getFullYear();
+
+			// ===== 预留接口：网盘 & 学习系统 =====
+			// 后续替换 href 即可：
+			// document.getElementById('cloudLink').href = 'https://cloud.sherry.qzz.io';
+			// document.getElementById('learningLink').href = 'https://learn.sherry.qzz.io';
+		</script>
+	</body>
+</html>

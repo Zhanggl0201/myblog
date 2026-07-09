@@ -1,10 +1,102 @@
 {
-  "title": "wow",
-  "description": "好看的",
-  "date": "2026-06-04",
-  "location": "web",
-  "tags": ["二次元", "jk", "美少女"],
-  "layout": "masonry",
-  "columns": 3,
-  "hidden": false
+	"mode": "external",
+	"title": "wow",
+	"description": "好看的",
+	"date": "2026-06-04",
+	"location": "web",
+	"tags": ["二次元", "jk", "美少女"],
+	"layout": "masonry",
+	"columns": 3,
+	"hidden": false,
+	"cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/cover.webp",
+	"photos": [
+		{
+			"id": "1",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/1.webp"
+		},
+		{
+			"id": "2",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/2.webp"
+		},
+		{
+			"id": "3",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/3.webp"
+		},
+		{
+			"id": "4",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/4.webp"
+		},
+		{
+			"id": "5",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/5.webp"
+		},
+		{
+			"id": "6",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/6.webp"
+		},
+		{
+			"id": "7",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/7.webp"
+		},
+		{
+			"id": "8",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/8.webp"
+		},
+		{
+			"id": "9",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/9.webp"
+		},
+		{
+			"id": "10",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/10.webp"
+		},
+		{
+			"id": "11",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/11.webp"
+		},
+		{
+			"id": "12",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/12.webp"
+		},
+		{
+			"id": "13",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/13.webp"
+		},
+		{
+			"id": "14",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/14.jpg"
+		},
+		{
+			"id": "15",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/15.webp"
+		},
+		{
+			"id": "16",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/16.webp"
+		},
+		{
+			"id": "17",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/17.webp"
+		},
+		{
+			"id": "18",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/18.webp"
+		},
+		{
+			"id": "19",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/19.webp"
+		},
+		{
+			"id": "20",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/20.webp"
+		},
+		{
+			"id": "21",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/21.webp"
+		},
+		{
+			"id": "22",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/22.webp"
+		}
+	]
 }

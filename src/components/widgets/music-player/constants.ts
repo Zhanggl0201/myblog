@@ -9,8 +9,8 @@ export const LOCAL_PLAYLIST: Song[] = [
 		id: 1,
 		title: "谎言是恋爱的开始 (Live)",
 		artist: "洛天依、鹿乃",
-		cover: "assets/music/cover/说谎是恋爱的开始.webp",
-		url: "assets/music/url/谎言是恋爱的开始 (Live) - 洛天依、鹿乃.mp3",
+		cover: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/music/cover/说谎是恋爱的开始.webp",
+		url: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/music/url/谎言是恋爱的开始 (Live) - 洛天依、鹿乃.mp3",
 		duration: 0,
 	},
 ];
