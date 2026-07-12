@@ -13,14 +13,22 @@ console.log("已加载 .env 配置文件\n");
 
 function findGitPath() {
 	const possiblePaths = [
+		"git",
 		"C:\\Program Files\\Git\\bin\\git.exe",
 		"C:\\Program Files (x86)\\Git\\bin\\git.exe",
 		path.join(process.env.LOCALAPPDATA, "Programs\\Git\\bin\\git.exe"),
-		"git",
 	];
 	for (const gitPath of possiblePaths) {
-		if (fs.existsSync(gitPath)) {
-			return gitPath;
+		try {
+			if (gitPath === "git") {
+				execSync("git --version", { stdio: "ignore" });
+				return "git";
+			}
+			if (fs.existsSync(gitPath)) {
+				return gitPath;
+			}
+		} catch {
+			continue;
 		}
 	}
 	return null;
