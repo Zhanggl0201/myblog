@@ -42,9 +42,9 @@ jobs:
           ENABLE_CONTENT_SYNC: true
           CONTENT_REPO_URL: https://github.com/Zhanggl0201/myblog-content.git
       
-      - name: Deploy to pages branch
+      - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: pages # 部署到pages分支
+          branch: gh-pages # 部署到gh-pages分支(GitHub Pages默认)
           folder: dist # Astro默认构建输出目录
           clean: true # 清理目标分支中的旧文件
