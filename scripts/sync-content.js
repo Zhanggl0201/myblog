@@ -140,10 +140,11 @@ for (const mapping of contentMappings) {
 		fs.unlinkSync(destPath);
 	}
 
-	// 创建符号链接 (Windows 需要管理员权限,否则复制文件)
+	// 创建符号链接 (Windows 使用 junction, Linux/Mac 使用 dir)
 	try {
 		const relPath = path.relative(path.dirname(destPath), srcPath);
-		fs.symlinkSync(relPath, destPath, "junction");
+		const linkType = process.platform === "win32" ? "junction" : "dir";
+		fs.symlinkSync(relPath, destPath, linkType);
 		console.log(`已创建符号链接：${mapping.dest} -> ${mapping.src}`);
 	} catch (error) {
 		console.log(`符号链接失败，改为复制内容：${mapping.src} -> ${mapping.dest}`);
