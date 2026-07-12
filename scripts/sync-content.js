@@ -11,6 +11,26 @@ const rootDir = path.resolve(__dirname, "..");
 loadEnv();
 console.log("已加载 .env 配置文件\n");
 
+function findGitPath() {
+	const possiblePaths = [
+		"C:\\Program Files\\Git\\bin\\git.exe",
+		"C:\\Program Files (x86)\\Git\\bin\\git.exe",
+		path.join(process.env.LOCALAPPDATA, "Programs\\Git\\bin\\git.exe"),
+		"git",
+	];
+	for (const gitPath of possiblePaths) {
+		if (fs.existsSync(gitPath)) {
+			return gitPath;
+		}
+	}
+	return null;
+}
+
+const gitPath = findGitPath();
+if (!gitPath) {
+	console.warn("警告：未找到 git 命令，将跳过远程同步");
+}
+
 // 从环境变量读取配置
 const ENABLE_CONTENT_SYNC = process.env.ENABLE_CONTENT_SYNC !== "false"; // 默认启用
 const CONTENT_REPO_URL = process.env.CONTENT_REPO_URL || "";
@@ -41,24 +61,31 @@ if (!fs.existsSync(CONTENT_DIR)) {
 		process.exit(0);
 	}
 
-	try {
-		console.log(`正在克隆内容仓库：${CONTENT_REPO_URL}`);
-		execSync(`git clone --depth 1 ${CONTENT_REPO_URL} ${CONTENT_DIR}`, {
-			stdio: "inherit",
-			cwd: rootDir,
-		});
-		console.log("内容仓库克隆成功");
-	} catch (error) {
-		console.error("克隆失败：", error.message);
+	if (!gitPath) {
+		console.error("错误：未找到 git 命令，无法克隆内容仓库");
 		process.exit(1);
 	}
+
+	try {
+			console.log(`正在克隆内容仓库：${CONTENT_REPO_URL}`);
+			const gitCmd = gitPath.includes(" ") ? `"${gitPath}"` : gitPath;
+			execSync(`${gitCmd} clone --depth 1 ${CONTENT_REPO_URL} ${CONTENT_DIR}`, {
+				stdio: "inherit",
+				cwd: rootDir,
+			});
+			console.log("内容仓库克隆成功");
+		} catch (error) {
+			console.error("克隆失败：", error.message);
+			process.exit(1);
+		}
 } else {
 	console.log(`内容目录已存在：${CONTENT_DIR}`);
 
-	if (fs.existsSync(path.join(CONTENT_DIR, ".git"))) {
+	if (fs.existsSync(path.join(CONTENT_DIR, ".git")) && gitPath) {
 		try {
 			console.log("正在拉取最新内容...");
-			execSync("git pull --allow-unrelated-histories", {
+			const gitCmd = gitPath.includes(" ") ? `"${gitPath}"` : gitPath;
+			execSync(`${gitCmd} pull --allow-unrelated-histories`, {
 				stdio: "inherit",
 				cwd: CONTENT_DIR,
 			});

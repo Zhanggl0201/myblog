@@ -4,7 +4,7 @@ published: 2025-11-16
 pinned: true
 draft: false
 category: Guide
-tags: [Usage, Guide]
+tags: [使用指南, 主题设置, 博客功能]
 description: 本指南将介绍博客页面上各个已启用的用户交互模块的功能和使用方法。
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/6.webp"
 ---

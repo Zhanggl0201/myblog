@@ -3,8 +3,8 @@ title: AI绘图之ComfyUI基础部署指北
 published: 2026-06-28
 pinned: false
 draft: false
-category: Guide
-tags: [comfyui, Guide, AI]
+category: AIGC
+tags: [ComfyUI, AIGC, AI绘图, Stable Diffusion, GGUF, 工作流]
 description: 教你如何部署一个简单的ComfyUI工作流并绘制一张图片
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/002.webp"
 ---
@@ -12,6 +12,8 @@ image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/
 # 🚀 AI绘图之ComfyUI基础部署指北
 
 本教程旨在帮助您快速上手 ComfyUI，完成本地模型的部署、基础工作流搭建，并生成第一张 AI 绘图作品。
+
+::github{repo="comfyanonymous/ComfyUI"}
 
 ## 🎯 准备工作 (Prerequisites)
 

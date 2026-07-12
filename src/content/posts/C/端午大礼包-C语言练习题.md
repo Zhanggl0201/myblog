@@ -4,7 +4,7 @@ published: 2026-06-22
 pinned: false
 draft: false
 category: C/C++
-tags: [C/C++, 改错题, 填空题, 编程题, 字符串, 数组]
+tags: [C/C++, 改错题, 填空题, 编程题, 字符串, 数组, 综合练习]
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/Jingliu/002.webp"
 ---
 

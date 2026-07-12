@@ -1,11 +1,11 @@
 ---
-title: 基于Astor模板构建一个好看的blog
+title: 基于Astro模板构建一个好看的blog
 published: 2025-11-16T12:00:00+08:00
 pinned: false
 description: 教你如何搭建一个好看的blog
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/13.webp"
-tags: [Blog, Astro, Node.js, 搭建]
-category: Guide
+tags: [Blog, Astro, Node.js, Mizuki, Firefly]
+category: DevOps
 draft: false
 ---
 # 第一步：配置环境依赖
@@ -48,6 +48,8 @@ git --version
 #### 这里提供两个开源的Astor模板，你也可以根据自己的需求选择其他模板。
 ## 1、Mizuki
 `Astro-theme-Mizuki`是一个基于`Astro`的现代化静态博客模板，具有丰富的功能和美观的设计，无论您是想写生活类博客、技术类博客、或者是知识库、系列文档等，主题都可以满足您的需求。<br>
+
+::github{repo="matsuzaka-yuki/Mizuki"}
 
 访问 <a href="https://github.com/matsuzaka-yuki/Mizuki" target="_blank">Mizuki</a> 以获取更多支持或赞助作者，本文只介绍如何安装和配置模板，感谢作者的贡献。
 

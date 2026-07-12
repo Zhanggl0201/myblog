@@ -3,8 +3,8 @@ title: LM Studio 本地 LLM 部署指南
 published: 2026-06-02
 pinned: false
 draft: false
-category: Guide
-tags: [LM Studio, Guide, LLM, AI]
+category: LLM
+tags: [LM Studio, LLM, AI, 本地部署, Chatbot]
 description: 教你如何运用LM Studio在本地部署一个LLM大模型，以便于无网环境下开展工作
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/14.webp"
 ---
@@ -12,6 +12,8 @@ image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/14.w
 # 🚀 LM Studio 本地 LLM 部署指南
 
 本指南旨在帮助您快速上手 LM Studio，完成本地大语言模型的下载、配置和启动，使其能够作为独立的聊天界面或作为 API 服务供其他程序调用。
+
+::github{repo="lmstudio-ai/lmstudio"}
 
 ## 🎯 第一步：准备工作 (Prerequisites)
 

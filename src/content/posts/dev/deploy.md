@@ -4,8 +4,8 @@ published: 2025-11-16T13:00:00+08:00
 pinned: false
 description: 教你如何对搭建好的博客进行部署
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/12.webp"
-tags: [Vercel, EdgeOne, GitHub, 部署]
-category: Guide
+tags: [Vercel, EdgeOne, GitHub, 部署, CI/CD]
+category: DevOps
 draft: false
 ---
 # 部署站点前的准备工作

@@ -3,8 +3,8 @@ title: Ollama 本地 LLM 部署指南
 published: 2026-06-04
 pinned: false
 draft: false
-category: Guide
-tags: [Ollama, Guide, LLM, AI]
+category: LLM
+tags: [Ollama, LLM, AI, 本地部署, API, CLI]
 description: 教你如何使用 Ollama 快速部署本地大语言模型，一行命令即可运行
 image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/10.webp"
 ---
@@ -12,6 +12,8 @@ image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/10.w
 # 🚀 Ollama 本地 LLM 部署指南
 
 Ollama 是一个轻量级的本地大语言模型运行框架，相比 LM Studio，它更简洁、启动更快，适合命令行用户和需要快速集成的场景。
+
+::github{repo="ollama/ollama"}
 
 ## 🎯 第一步：准备工作 (Prerequisites)
 
