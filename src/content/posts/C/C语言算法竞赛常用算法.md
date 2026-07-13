@@ -6,7 +6,7 @@ draft: false
 category: C/C++
 tags: [C, 算法设计, 竞赛]
 description: C语言算法竞赛常用算法：例题 + 完整代码
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/4.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/RuanMei/027.webp"
 ---
 
 ## 1. 并查集 —— 连通块问题

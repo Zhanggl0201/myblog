@@ -6,7 +6,7 @@ draft: false
 category: AIGC
 tags: [ComfyUI, AIGC, AI绘图, Stable Diffusion, GGUF, 工作流]
 description: 教你如何部署一个简单的ComfyUI工作流并绘制一张图片
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/002.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/11.webp"
 ---
 
 # 🚀 AI绘图之ComfyUI基础部署指北

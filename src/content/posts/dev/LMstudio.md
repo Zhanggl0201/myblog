@@ -6,7 +6,7 @@ draft: false
 category: LLM
 tags: [LM Studio, LLM, AI, 本地部署, Chatbot]
 description: 教你如何运用LM Studio在本地部署一个LLM大模型，以便于无网环境下开展工作
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/14.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/RuanMei/019.webp"
 ---
 
 # 🚀 LM Studio 本地 LLM 部署指南

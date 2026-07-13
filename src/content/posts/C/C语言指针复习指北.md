@@ -6,7 +6,7 @@ draft: false
 category: C/C++
 tags: [C/C++, 指针, 内存管理, 地址传递]
 description: 0基础速通C语言指针。
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/RuanMei/010.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/15.webp"
 ---
 
 

@@ -53,6 +53,9 @@ src/data/bilibili-data.json
 # Lighthouse CI
 .lighthouseci/
 
+# WorkBuddy assistant state
+.workbuddy/
+
 .vercel
 .env*
 

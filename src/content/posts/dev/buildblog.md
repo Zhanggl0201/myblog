@@ -3,7 +3,7 @@ title: 基于Astro模板构建一个好看的blog
 published: 2025-11-16T12:00:00+08:00
 pinned: false
 description: 教你如何搭建一个好看的blog
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/13.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/RuanMei/007.webp"
 tags: [Blog, Astro, Node.js, Mizuki, Firefly]
 category: DevOps
 draft: false

@@ -6,7 +6,7 @@ draft: false
 category: LLM
 tags: [Ollama, LLM, AI, 本地部署, API, CLI]
 description: 教你如何使用 Ollama 快速部署本地大语言模型，一行命令即可运行
-image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/10.webp"
+image: "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/RuanMei/044.webp"
 ---
 
 # 🚀 Ollama 本地 LLM 部署指南

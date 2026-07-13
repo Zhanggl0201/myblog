@@ -3,9 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  repository_dispatch:
-    types:
-      - content-updated
   workflow_dispatch:
 
 permissions:
@@ -40,8 +37,7 @@ jobs:
       - name: Build site
         run: pnpm run build
         env:
-          ENABLE_CONTENT_SYNC: true
-          CONTENT_REPO_URL: https://github.com/Zhanggl0201/myblog-content.git
+          ENABLE_CONTENT_SYNC: false
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
