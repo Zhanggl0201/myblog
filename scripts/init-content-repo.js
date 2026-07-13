@@ -71,7 +71,13 @@ async function main() {
 	const envContent = `# Mizuki 内容仓库配置
 # 由初始化脚本自动生成
 
+# 是否启用内容分离功能
+ENABLE_CONTENT_SYNC=true
+
+# 内容仓库的 Git URL
 CONTENT_REPO_URL=${repoUrl.trim()}
+
+# 内容目录路径
 CONTENT_DIR=./content
 `;
 
