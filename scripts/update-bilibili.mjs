@@ -156,26 +156,25 @@ async function getData(
 				if (cover.startsWith("http://")) {
 					cover = cover.replace("http://", "https://");
 				}
-				// 如果需要使用镜像源
-				if (coverMirror) {
-					cover = `${coverMirror}${cover}`;
+			// 如果需要使用镜像源
+			if (coverMirror) {
+				cover = `${coverMirror}${cover}`;
+				// weserv 镜像：用其原生参数做缩放+WebP，避免与 B站 @ 语法冲突导致双重包裹 404
+				if (useWebp && coverMirror.includes("weserv.nl")) {
+					cover += (cover.includes("?") ? "&" : "?") + "w=220&h=280&output=webp";
 				}
-				// 如果需要WebP格式
-				if (useWebp && !cover.includes("@")) {
-					try {
-						const urlObj = new URL(cover);
-						// 如果路径中还没有尺寸参数，添加WebP优化参数
-						if (!urlObj.pathname.includes("@")) {
-							urlObj.pathname += "@220w_280h.webp";
-							cover = urlObj.toString();
-							if (coverMirror) {
-								cover = `${coverMirror}${cover}`;
-							}
-						}
-					} catch {
-						// URL解析失败，使用原始封面
+			} else if (useWebp && !cover.includes("@")) {
+				// 无镜像时回退到 B站自身 @ 语法压缩
+				try {
+					const urlObj = new URL(cover);
+					if (!urlObj.pathname.includes("@")) {
+						urlObj.pathname += "@220w_280h.webp";
+						cover = urlObj.toString();
 					}
+				} catch {
+					// URL解析失败，使用原始封面
 				}
+			}
 			} catch {
 				// URL处理失败，使用原始封面
 			}
