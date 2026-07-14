@@ -1,0 +1,37 @@
+{
+	"mode": "external",
+	"title": "6.6",
+	"description": "6.6 图集",
+	"cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/002.jpg",
+	"date": "2025-08-01",
+	"location": "",
+	"tags": [
+		"6.6"
+	],
+	"photos": [
+		{
+			"id": "6.6-photo-1",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/002.jpg",
+			"alt": "002",
+			"title": "002"
+		},
+		{
+			"id": "6.6-photo-2",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/005.jpg",
+			"alt": "005",
+			"title": "005"
+		},
+		{
+			"id": "6.6-photo-3",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/1.webp",
+			"alt": "1",
+			"title": "1"
+		},
+		{
+			"id": "6.6-photo-4",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/preview.png",
+			"alt": "preview",
+			"title": "preview"
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"mode": "external",
+	"title": "崩坏：星穹铁道 · 银狼",
+	"description": "崩坏：星穹铁道 角色图集",
+	"cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/001.webp",
+	"date": "2025-08-01",
+	"location": "",
+	"tags": [
+		"银狼",
+		"HSR",
+		"崩坏星穹铁道"
+	],
+	"photos": [
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-1",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/001.webp",
+			"alt": "001",
+			"title": "001"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-2",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/002.webp",
+			"alt": "002",
+			"title": "002"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-3",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/003.webp",
+			"alt": "003",
+			"title": "003"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-4",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/004.webp",
+			"alt": "004",
+			"title": "004"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-5",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/005.webp",
+			"alt": "005",
+			"title": "005"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-6",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/006.webp",
+			"alt": "006",
+			"title": "006"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-7",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/007.webp",
+			"alt": "007",
+			"title": "007"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-8",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/008.webp",
+			"alt": "008",
+			"title": "008"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-9",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/009.webp",
+			"alt": "009",
+			"title": "009"
+		},
+		{
+			"id": "HonkaiStarRail-SilverWolf-photo-10",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/HonkaiStarRail/SilverWolf/010.webp",
+			"alt": "010",
+			"title": "010"
+		}
+	]
+}

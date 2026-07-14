@@ -1,0 +1,146 @@
+{
+	"mode": "external",
+	"title": "ACG 图集",
+	"description": "来自网络的二次元美图，联系侵删",
+	"cover": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/1.webp",
+	"date": "2025-08-01",
+	"location": "",
+	"tags": [
+		"ACG",
+		"美图"
+	],
+	"photos": [
+		{
+			"id": "AcgExample-photo-1",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/1.webp",
+			"alt": "1",
+			"title": "1"
+		},
+		{
+			"id": "AcgExample-photo-2",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/10.webp",
+			"alt": "10",
+			"title": "10"
+		},
+		{
+			"id": "AcgExample-photo-3",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/11.webp",
+			"alt": "11",
+			"title": "11"
+		},
+		{
+			"id": "AcgExample-photo-4",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/12.webp",
+			"alt": "12",
+			"title": "12"
+		},
+		{
+			"id": "AcgExample-photo-5",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/13.webp",
+			"alt": "13",
+			"title": "13"
+		},
+		{
+			"id": "AcgExample-photo-6",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/14.webp",
+			"alt": "14",
+			"title": "14"
+		},
+		{
+			"id": "AcgExample-photo-7",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/15.webp",
+			"alt": "15",
+			"title": "15"
+		},
+		{
+			"id": "AcgExample-photo-8",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/16.webp",
+			"alt": "16",
+			"title": "16"
+		},
+		{
+			"id": "AcgExample-photo-9",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/17.webp",
+			"alt": "17",
+			"title": "17"
+		},
+		{
+			"id": "AcgExample-photo-10",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/18.webp",
+			"alt": "18",
+			"title": "18"
+		},
+		{
+			"id": "AcgExample-photo-11",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/19.webp",
+			"alt": "19",
+			"title": "19"
+		},
+		{
+			"id": "AcgExample-photo-12",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/2.webp",
+			"alt": "2",
+			"title": "2"
+		},
+		{
+			"id": "AcgExample-photo-13",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/20.webp",
+			"alt": "20",
+			"title": "20"
+		},
+		{
+			"id": "AcgExample-photo-14",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/21.webp",
+			"alt": "21",
+			"title": "21"
+		},
+		{
+			"id": "AcgExample-photo-15",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/3.webp",
+			"alt": "3",
+			"title": "3"
+		},
+		{
+			"id": "AcgExample-photo-16",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/4.webp",
+			"alt": "4",
+			"title": "4"
+		},
+		{
+			"id": "AcgExample-photo-17",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/5.webp",
+			"alt": "5",
+			"title": "5"
+		},
+		{
+			"id": "AcgExample-photo-18",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/6.webp",
+			"alt": "6",
+			"title": "6"
+		},
+		{
+			"id": "AcgExample-photo-19",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/7.webp",
+			"alt": "7",
+			"title": "7"
+		},
+		{
+			"id": "AcgExample-photo-20",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/8.webp",
+			"alt": "8",
+			"title": "8"
+		},
+		{
+			"id": "AcgExample-photo-21",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/9.webp",
+			"alt": "9",
+			"title": "9"
+		},
+		{
+			"id": "AcgExample-photo-22",
+			"src": "https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/AcgExample/cover.webp",
+			"alt": "cover",
+			"title": "cover"
+		}
+	]
+}
