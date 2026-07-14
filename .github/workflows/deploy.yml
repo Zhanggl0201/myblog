@@ -38,6 +38,7 @@ jobs:
         run: pnpm run build
         env:
           ENABLE_CONTENT_SYNC: false
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
