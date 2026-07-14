@@ -26,7 +26,7 @@ const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UT
 export const siteConfig: SiteConfig = {
 	title: "金字招牌",
 	subtitle: "",
-	siteURL: "https://blog.sherry.qzz.io/", // 请替换为你的站点URL，以斜杠结尾
+	siteURL: "https://blog.radarweb.top/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-10-01", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
@@ -57,7 +57,7 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Yunfan Tech",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/home.webp",
+		icon: "",
 		// 网站Logo图片路径
 		logo: "assets/home/logo.png",
 	},
@@ -125,27 +125,13 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/1.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/2.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/3.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/4.webp",
+				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/6.6/1.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/5.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/6.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/7.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/8.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/9.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/10.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/11.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/12.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/13.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/14.jpg",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/15.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/16.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/17.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/18.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/19.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/20.webp",
-				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/21.webp",
 				"https://cdn.jsdmirror.cn/gh/Zhanggl0201/blog-images@main/desktop-banner/22.webp",
 			], // 桌面横幅图片
 			mobile: [
