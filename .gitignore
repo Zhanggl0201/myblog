@@ -59,6 +59,3 @@ src/data/bilibili-data.json
 .vercel
 .env*
 
-# Old content directories
-C/
-
